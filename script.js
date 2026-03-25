@@ -1,26 +1,18 @@
 const canvas = document.getElementById('fog');
 const ctx = canvas.getContext('2d');
 
-const devicePixelRatio = window.devicePixelRatio || 1;
 const fogParticles = [];
-const particleCount = 40;
+const particleCount = 25;
+
 const colors = [
-  'rgba(155,60,255,0.06)',
-  'rgba(255,104,212,0.06)',
-  'rgba(255,181,247,0.06)'
+  'rgba(200, 190, 160, 0.08)',
+  'rgba(220, 210, 180, 0.06)',
+  'rgba(180, 170, 140, 0.05)'
 ];
 
 function resizeCanvas() {
-  const width = window.innerWidth;
-  const height = window.innerHeight;
-
-  canvas.style.width = `${width}px`;
-  canvas.style.height = `${height}px`;
-
-  canvas.width = Math.round(width * devicePixelRatio);
-  canvas.height = Math.round(height * devicePixelRatio);
-
-  ctx.setTransform(devicePixelRatio, 0, 0, devicePixelRatio, 0, 0);
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
 }
 
 resizeCanvas();
@@ -34,9 +26,11 @@ class FogParticle {
   reset() {
     this.x = Math.random() * window.innerWidth;
     this.y = Math.random() * window.innerHeight;
-    this.size = 50 + Math.random() * 150;
-    this.speedX = (Math.random() - 0.5) * 0.3;
-    this.speedY = (Math.random() - 0.5) * 0.1;
+    this.size = 100 + Math.random() * 200;
+
+    this.speedX = (Math.random() - 0.5) * 0.1;
+    this.speedY = (Math.random() - 0.5) * 0.05;
+
     this.color = colors[Math.floor(Math.random() * colors.length)];
   }
 
@@ -67,15 +61,15 @@ for (let i = 0; i < particleCount; i++) {
 }
 
 function animateFog() {
-  ctx.clearRect(0, 0, window.innerWidth, window.innerHeight);
-  fogParticles.forEach((particle) => {
-    particle.update();
-    particle.draw();
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  fogParticles.forEach(p => {
+    p.update();
+    p.draw();
   });
+
   requestAnimationFrame(animateFog);
 }
 
 animateFog();
-
-
 
