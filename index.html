@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Glitch Neon + Dimma</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Fullskärms glitch video -->
+  <video id="glitch" autoplay loop muted playsinline>
+    <source src="glitch.webm" type="video/webm">
+  </video>
+
+  <!-- Textinnehåll -->
+  <div class="content">
+    <div class="avatar-wrap">
+      <img class="avatar" src="Me403.png" alt="Simon Norén" />
+    </div>
+    <h1>Simon Norén</h1>
+    <p>Cyber Security Engineer</p>
+    <div class="social">
+      <a href="https://www.linkedin.com/in/simon-nor%C3%A9n-a48662278/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path d="M19 0H5C2.23858 0 0 2.23858 0 5V19C0 21.7614 2.23858 24 5 24H19C21.7614 24 24 21.7614 24 19V5C24 2.23858 21.7614 0 19 0ZM7.08 20.451H3.54V9H7.08V20.451ZM5.31 7.5015C4.073 7.5015 3.08 6.4995 3.08 5.263C3.08 4.0265 4.073 3.0245 5.31 3.0245C6.548 3.0245 7.54 4.0265 7.54 5.263C7.54 6.4995 6.548 7.5015 5.31 7.5015ZM20.46 20.451H16.92V14.908C16.92 13.514 16.893 11.749 15.076 11.749C13.231 11.749 12.94 13.19 12.94 14.812V20.451H9.4V9H12.8V10.582H12.852C13.369 9.737 14.636 8.843 16.421 8.843C20.063 8.843 20.46 11.315 20.46 14.237V20.451Z"/>
+        </svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Citatrad -->
+  <div class="quote-banner" aria-live="polite">
+    <div class="quote-track">
+      <span class="quote-text">-𝕿𝖍𝖊 𝖒𝖔𝖘𝖙 𝖆𝖉𝖛𝖆𝖓𝖈𝖊𝖉 𝖘𝖞𝖘𝖙𝖊𝖒𝖘 𝖆𝖗𝖊𝖓’𝖙 𝖇𝖗𝖊𝖆𝖈𝖍𝖊𝖉 𝖇𝖞 𝖈𝖔𝖉𝖊, 𝖇𝖚𝖙 𝖇𝖞 𝖈𝖔𝖓𝖛𝖎𝖓𝖈𝖎𝖓𝖌 𝖆 𝖍𝖚𝖒𝖆𝖓 𝖙𝖔 𝖙𝖗𝖚𝖘𝖙 𝖙𝖍𝖊 𝖜𝖗𝖔𝖓𝖌 𝖒𝖊𝖘𝖘𝖆𝖌𝖊-</span>
+      <span class="quote-text">-𝕿𝖍𝖊 𝖒𝖔𝖘𝖙 𝖆𝖉𝖛𝖆𝖓𝖈𝖊𝖉 𝖘𝖞𝖘𝖙𝖊𝖒𝖘 𝖆𝖗𝖊𝖓’𝖙 𝖇𝖗𝖊𝖆𝖈𝖍𝖊𝖉 𝖇𝖞 𝖈𝖔𝖉𝖊, 𝖇𝖚𝖙 𝖇𝖞 𝖈𝖔𝖓𝖛𝖎𝖓𝖈𝖎𝖓𝖌 𝖆 𝖍𝖚𝖒𝖆𝖓 𝖙𝖔 𝖙𝖗𝖚𝖘𝖙 𝖙𝖍𝖊 𝖜𝖗𝖔𝖓𝖌 𝖒𝖊𝖘𝖘𝖆𝖌𝖊-</span>
+    </div>
+  </div>
+
+  <!-- Extra sektion (mörkgrå ruta) -->
+  <div class="content content-extended">
+    <h2>KNOWLAGE</h2>
+    <p>Worked in VMP -Vulnerability Management Programs.</p>
+    
+       <h2>More About Me</h2>
+      <p>...</p>
+  
+  </div>
+
+  <!-- Canvas för dimma -->
+  <canvas id="fog"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
