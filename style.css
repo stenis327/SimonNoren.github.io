@@ -14,15 +14,19 @@ body {
   position: relative;
   z-index: 2;
   text-align: center;
+
   margin: 15vh auto 0 auto;
-  max-width: 500px;
+  max-width: 900px;   /* ← större */
+  width: 90%;
 
   background: white;
-  padding: 2rem;
-  border-radius: 12px;
+  padding: 3rem 2rem;
 
+  border-radius: 16px;
   border: 1px solid #e5e5e5;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.06);
+
+  color: #222;
 }
 
 /* Second section */
