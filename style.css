@@ -9,8 +9,14 @@
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: #f5f5dc; /* beige */
   color: #222;
+
+  background: linear-gradient(
+    135deg,
+    #f5f5dc 0%,
+    #efe8d8 40%,
+    #e6decc 100%
+  );
 }
 
 /* Main cards */
