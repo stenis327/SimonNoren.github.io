@@ -23,20 +23,29 @@ body {
 .content {
   position: relative;
   z-index: 2;
-  text-align: center;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
 
   margin: 15vh auto 0 auto;
-  max-width: 900px;   /* ← större */
+  max-width: 1000px;
   width: 90%;
 
   background: white;
-  padding: 3rem 2rem;
+  padding: 3.5rem;
 
-  border-radius: 16px;
+  border-radius: 20px;
   border: 1px solid #e5e5e5;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.06);
 
-  color: #222;
+  box-shadow:
+    0 30px 80px rgba(0,0,0,0.07),
+    0 5px 20px rgba(0,0,0,0.04);
+
+  text-align: left;
+
+  animation: fadeIn 0.8s ease forwards;
 }
 
 /* Second section */
